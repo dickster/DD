@@ -1,7 +1,7 @@
 
 import {ValidationLevel} from "./ValidationLevel";
 
-export class WorkResponse {
+export class ValidationResponse {
     level: ValidationLevel;
     code: number;
     msg: string;

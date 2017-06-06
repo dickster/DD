@@ -1,7 +1,7 @@
 import {DocKey} from "./DocKey";
 
 import {FormKey} from "./FormKey";
-import {WorkResponse} from "./WorkResponse";
+import {ValidationResponse} from "./WorkResponse";
 import {WorkStatus} from "./WorkStatus";
 
 export class Work {
@@ -15,7 +15,7 @@ export class Work {
     created:Date;
     modified:Date;
     status:WorkStatus|string;
-    lastResponse:WorkResponse;
+    lastResponse:ValidationResponse;
     currentState:FormKey; /*nullable*/
     context:DocKey[]; //contextId&version;
     desc:string;// get pertinent info from policy and store it here.   e.g. "John Doe Auto Policy,

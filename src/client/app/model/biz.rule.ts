@@ -1,6 +1,6 @@
 
-import {ValidationResponse} from "./ValidationResponse";
-import {Expression} from "./Expression";
+import {ValidationResponse} from "./validation.response";
+import {Expression} from "./expression";
 
 export class BizRule {
     // maybe have to add valueChanges listener to every field!!!! whaaaa?

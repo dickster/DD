@@ -1,5 +1,6 @@
 
-import {ValidationLevel} from "./ValidationLevel";
+
+import {ValidationLevel} from "./validation.level";
 
 export class ValidationResponse {
     level: ValidationLevel;

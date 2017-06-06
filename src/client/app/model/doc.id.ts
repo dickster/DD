@@ -1,6 +1,6 @@
 import {Version} from "./Version";
 
-export interface DocKey {
+export interface DocId {
     id:number;
     version:Version|number;  // nullable.
 }

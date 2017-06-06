@@ -15,6 +15,7 @@ export class Work {
     created:Date;
     modified:Date;
     status:WorkStatus|string;
+    locale:string; //nullable default = 'en';
     lastResponse:ValidationResponse;
     visitedStates:FormId[];  // the current state (if any) is the last one.
     context:DocId[]; //contextId&version;

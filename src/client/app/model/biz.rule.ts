@@ -8,6 +8,7 @@ export class BizRule {
     field:string; // e.g. "first time insured?" or "downpayment amount"
     showWhen:Expression; //nullable. // e.g isVisible() { return(previousInsurer==null) }
     validation:Expression; //nullable.
+    asyncValidators:string[];   // list of urls to call.
     // typically submit will be disabled if any validator returns ValidationLevel:ERROR.
     validationResponse: ValidationResponse;
     // help text will be shown if has-warning

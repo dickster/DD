@@ -1,5 +1,6 @@
 import {PanelConfig} from "./pane.config";
 import {Version} from "../model/version";
+import {TranslationTable} from "./TranslationTable";
 
 export class FormConfig {
     title:string;
@@ -7,5 +8,5 @@ export class FormConfig {
     // audit trail stuff...
     panels:PanelConfig[];
     layout:string;  //ignore for now...
-
+    translation:TranslationTable;
 }

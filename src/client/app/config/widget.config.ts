@@ -5,6 +5,8 @@ export class WidgetConfig<T> {
     type: string;
 
     label: string;
+    labelKey?:string;   // if null, default it to label.  useful for when the label is really long
+                        // or you need a unique identifier for the same label.
     // layout...
     labelWidth:number;
     width:number;
@@ -24,6 +26,10 @@ export class WidgetConfig<T> {
             label?: string,
             placeholder?:string,
             required?: boolean,
+            labelKey?: string,
+            labelWidth?: number,
+            width?: number,
+            offset?: number,
             order?: number,
             css?: string,
             type?: string,
@@ -35,6 +41,10 @@ export class WidgetConfig<T> {
         this.order = options.order === undefined ? 1 : options.order;
         this.type = options.type || '';
         this.css = options.css || '';
+        this.width = options.width || 6;
+        this.offset = options.offset || 0;
+        this.labelWidth = options.labelWidth || 6;
+        this.labelKey = options.labelKey || this.label;
         this.placeholder = options.placeholder || '';
     }
 

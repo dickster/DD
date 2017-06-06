@@ -1,5 +1,5 @@
-import {Version} from "../model/Version";
-import {PanelConfig} from "../model/PanelConfig";
+import {PanelConfig} from "./pane.config";
+import {Version} from "../model/version";
 
 export class FormConfig {
     title:string;

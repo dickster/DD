@@ -1,0 +1,3 @@
+export enum WorkStatus {
+    IN_PROGRESS, CLOSED //whatever else you need here...
+}

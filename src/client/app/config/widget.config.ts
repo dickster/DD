@@ -19,9 +19,8 @@ export class WidgetConfig<T> {
 
     // NOTE : validators, asyncValidators & showWhen moved to BizRules.
 
-
     constructor(options: {
-        value?: T,
+            value?: T,
             key?: string,
             label?: string,
             placeholder?:string,
@@ -33,7 +32,7 @@ export class WidgetConfig<T> {
             order?: number,
             css?: string,
             type?: string,
-    } = {}) {
+    }) {
         this.value = options.value;
         this.key = options.key || '';
         this.label = options.label || '';

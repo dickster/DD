@@ -27,6 +27,7 @@ export class Work {
 // use JSON patch as diff tool!!! FUCKING AMAZING.
 // still need to resolve key->values.
 // form.control.value=CSIO:2, form.control.textValue = 'COPPER'
+// this can be looked up via widgetConfig.
 
 //java
 class WorkRepository {

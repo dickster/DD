@@ -1,7 +1,7 @@
 import {ValidationResponse} from "./validation.response";
-export class AsyncValidator {
-    name:string;
-    parameters:string[];
-    url:string;  // if null, uses default validator with {{name}} appended.
+import {Endpoint} from "./endpoint";
+
+export class AsyncValidator extends Endpoint {
     validationResponse: ValidationResponse;   // if null, will just use servers response. otherwise will extend with this template.
+    constructor({name:string,
 }

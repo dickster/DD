@@ -10,8 +10,6 @@ export class Translations {
     private parent:DocId;
     private translations:{[lang:string]:{[key:string]:string}};
 
-    // NOTE : i don't necessarily want to use the key.  sometimes the control will use an alias
-
     public get(key:string, lang=this.DEFAULT_LANG):string {
         if (!this.translations[lang]) {
             return key + ' ['+lang+']';

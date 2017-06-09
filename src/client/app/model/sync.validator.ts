@@ -1,3 +1,5 @@
+import {Expression} from "./expression";
+
 export class SyncValidator {
-    content:string|Function;
+    content:Expression|Function;
 }

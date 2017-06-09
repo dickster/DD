@@ -1,6 +1,7 @@
 
+import {BizRule} from "../model/biz.rule";
 export class WidgetConfig<T> {
-    value: T;
+    value: T;           // default value.
     key: string;
     type: string;
 
@@ -16,35 +17,44 @@ export class WidgetConfig<T> {
     order: number;
     css: string;
     placeholder:string;
+    rememberAs:string;
 
-    // NOTE : validators, asyncValidators & showWhen moved to BizRules.
+    bizRules: BizRule[];
+
 
     constructor(options: {
+            key: string,
+            type: string,
             value?: T,
-            key?: string,
             label?: string,
             placeholder?:string,
             required?: boolean,
             labelKey?: string,
             labelWidth?: number,
+            bizRules?:BizRule[],
             width?: number,
             offset?: number,
+            rememberAs?:string,
             order?: number,
             css?: string,
-            type?: string,
     }) {
+        this.key = options.key;
+        this.type = options.type;
         this.value = options.value;
-        this.key = options.key || '';
         this.label = options.label || '';
         this.required = !!options.required;
-        this.order = options.order === undefined ? 1 : options.order;
-        this.type = options.type || '';
+        this.order = options.order ? options.order : 1;
         this.css = options.css || '';
         this.width = options.width || 6;
         this.offset = options.offset || 0;
         this.labelWidth = options.labelWidth || 6;
         this.labelKey = options.labelKey || this.label;
         this.placeholder = options.placeholder || '';
+        this.bizRules = options.bizRules || [];
+        this.rememberAs = options.rememberAs;   // add change listener.  set rememory[key]=value.
+
+        // if async validators added, handle them myself?   i.e. after 400MS, call any queued up validators
+        // when data is dirty.
     }
 
 }

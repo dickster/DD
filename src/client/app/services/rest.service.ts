@@ -9,7 +9,7 @@ export class RestService<T> {
     private actionUrl: string;
     private headers: Headers;
 
-    constructor(public http: Http ) {
+    constructor(public http: Http) {
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json');
         this.headers.append('Accept', 'application/json');

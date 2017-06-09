@@ -2,7 +2,7 @@
 export class Endpoint {
     private name:string;
     private parameters:string[];
-    private base:string='./';
+    private base:string='./';   // get this from GULP build variable   <%= END_POINT %>
 
     constructor(name:string, parameters?:string[], base='./') {
         this.name=name;

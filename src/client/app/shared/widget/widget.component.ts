@@ -33,7 +33,6 @@ export class QuestionComponent {
     constructor() {
     }
 
-
     get isValid() { return this.form.controls[this.widget.key].valid; }
     get isPristine() { return this.form.controls[this.widget.key].pristine; }
     get isTouched() { return this.form.controls[this.widget.key].touched; }
@@ -48,7 +47,7 @@ export class QuestionComponent {
         return true;
     }
 
-    // refactor this to take value parameter...   (control:string, value:string)
+    // refactor this to take value parameter...  (control:string, value:string)
     isActiveYesNo(control:string) {
         let result : boolean = this.form.controls[control].value=='yes';
         return result;

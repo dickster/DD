@@ -1,5 +1,7 @@
 
 export class Endpoint {
+    // may need to add ability to call ng2 code, not just REST code on server.....
+
     private name:string;
     private parameters:string[];
     private base:string='./';   // get this from GULP build variable   <%= END_POINT %>

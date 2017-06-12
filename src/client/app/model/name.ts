@@ -1,4 +1,9 @@
 export class Name {
-    first:string;
-    last:string;
+    first:string|string[];
+    last:string|string[];
+    middle:string;
+    salutation:string|string[];
+    nickname:string;
+    title:string|string[];
+    relation:string|string[];
 }

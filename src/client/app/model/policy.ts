@@ -10,5 +10,7 @@ export class Policy {
 
     name : Name;
     address : Address;
+
+    // do i need LOB here?
 }
 

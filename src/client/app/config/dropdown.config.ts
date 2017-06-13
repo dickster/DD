@@ -14,19 +14,8 @@ export class DropDownConfig extends WidgetConfig<string> {
     constructor(options: {
             key: string,
             type: string,
-            choices:{[key: string]:string}|DocId|Endpoint,
-            value?: string,
-            label?: string,
-            placeholder?:string,
-            required?: boolean,
-            labelKey?: string,
-            labelWidth?: number,
-            bizRules?:BizRule[],
-            width?: number,
-            offset?: number,
-            rememberAs?:string,
-            order?: number,
-            css?: string}
+            choices:{[key: string]:string}|DocId|Endpoint
+            }
         ) {
         super(options);
         this.choices = options.choices;

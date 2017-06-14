@@ -98,7 +98,7 @@ export class SeedConfig {
   APP_BASE = argv['base'] || '/';
 
 
-  BOOTSTRAP_THEME = argv['theme'] || 'default';
+  BOOTSTRAP_THEME = argv['theme'] || 'paper';
 
   /**
    * The base path of node modules.

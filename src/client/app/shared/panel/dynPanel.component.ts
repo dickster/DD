@@ -5,9 +5,6 @@ import {Router, ActivatedRoute} from "@angular/router";
 import {FormConfig} from "../../config/form.config";
 
 
-
-page : dynpanel:[id]
-
 @Component({
     templateUrl: 'app/ai.component.html',
     // providers: [FormConfigService]
@@ -20,6 +17,8 @@ export class DynPanel implements OnInit {
 
     //@Input formId:DocId
     // need to read controller name. it will handle submits and clicks and ???
+
+    // what is this bound to???
 
     constructor(private router:Router,
                 private route:ActivatedRoute,
@@ -73,5 +72,16 @@ export class DynPanel implements OnInit {
         this.router.navigate(['/ai2']);
     }
 
-
 }
+
+// need an initial state that will do (pre)validations after time (1ms)
+
+// need a workflow page - takes a Workflow DocId as parameter.
+// router-outlet is page thingy which contains dynForm.  workId = blah.
+// load work object.  load policy (embedded?) get workflow definition.
+// dataservice.resetState(workflowId);
+// dataservice.getCurrentForm();  ..getWorkflowDefinition()...save/upsert()...etc...
+
+// dynForm takes formId & uses dataservice to get formData.
+
+

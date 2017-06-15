@@ -11,7 +11,8 @@ export class Workflow {
     //  think of the easy mongo queries...findPolicyById([quoteIds]).orderByTotalCost(); etc...
     // maybe have policy be a collection of policies? but can each have a different state? or is currentState irrelevant?
 
-    policy:DocId[]|DocId;  // immutable.  only set during creation time.
+    currentPolicy:number;  // return policy[currentPolicy];
+    policy:DocId[];  // WORM.  can't change after you add.   can
 
     // state.
     user:string;

@@ -2,6 +2,12 @@
 export class Endpoint {
     // may need to add ability to call ng2 code, not just REST code on server.....
 
+
+    // could be useful if URL contained parameter interplation.
+    // e.g. base = './{{policy.lob}}//{{policy.subtype}}'
+    // this would be an alternative to passing parameters.  would need access to data object.
+    //    let url = base.interpolate(obj);    // ./{{policy.lob}}  -->   ./auto    assuming  obj = {policy:{lob:'auto'}}
+
     private name:string;
     private parameters:string[];
     private base:string='./';   // get this from GULP build variable   <%= END_POINT %>

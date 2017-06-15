@@ -2,6 +2,8 @@ import {ValidationResponse} from "./validation.response";
 import {Endpoint} from "./endpoint";
 import {Expression} from "./expression";
 
+// maybe i should make this implement Validator???
+
 export class AsyncValidator extends Endpoint {
     private msgs:{[code:string]:string};  // nullable.
     private expression:Expression;

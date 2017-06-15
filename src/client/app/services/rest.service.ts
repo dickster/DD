@@ -31,8 +31,14 @@ export class RestService<T> {
             .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if
     }
 
-    public get(): Observable<T[]> {
-       return this.http.get(this.actionUrl)
+
+    public get(params:any): Observable<T[]> {
+        let searchParams = new URLSearchParams();
+        for (let param in params) {
+            searchParams.set(param, params[param]);
+        }
+
+        return this.http.get(this.actionUrl, searchParams)
             .map((response: Response) => <T[]>response.json())
             .catch(this.handleError);
     }

@@ -1,67 +1,21 @@
 <nav>
-    <div class="btn-toolbar bs-component" style="margin: 0;">
-        <div class="btn-group">
-            <a href="#" class="btn btn-default">Default</a>
-            <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
+
+    <!--<div class="btn-toolbar bs-component" style="margin: 0;">-->
 
         <div class="btn-group">
-            <a href="#" class="btn btn-primary">Primary</a>
+            <a href="#" class="btn btn-primary">Create Policy</a>
             <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a class="" [routerLink]="['/create']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Hab</a></li>
+                <li><a class="" [routerLink]="['/create']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Auto</a></li>
+                <li><a class="" [routerLink]="['/create']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Commercial</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a class="" [routerLink]="['/create']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Life</a></li>
             </ul>
         </div>
 
-        <div class="btn-group">
-            <a href="#" class="btn btn-success">Success</a>
-            <a href="#" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
+    <!--</div>-->
 
-        <div class="btn-group">
-            <a href="#" class="btn btn-info">Info</a>
-            <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <a href="#" class="btn btn-warning">Warning</a>
-            <a href="#" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </div>
-    </div>
-
-  <a class="btn btn-primary" [routerLink]="['/create']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Create Policy</a>
   <a class="btn btn-primary" [routerLink]="['/inbox']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">View Inbox</a>
   <a class="btn btn-primary" [routerLink]="['/forms']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">View Forms</a>
 </nav>

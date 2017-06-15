@@ -16,7 +16,6 @@ export class WidgetConfig<T> {
     required: boolean;
     order: number;
     css: string;
-    placeholder:string;
     rememberAs:string;
 
     bizRules: BizRule[];
@@ -27,7 +26,6 @@ export class WidgetConfig<T> {
             type: string,
             value?: T,
             label?: string,
-            placeholder?:string,
             required?: boolean,
             labelKey?: string,
             labelWidth?: number,

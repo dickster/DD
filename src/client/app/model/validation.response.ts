@@ -1,6 +1,6 @@
 
-
 import {ValidationLevel} from "./validation.level";
+import {WorkService} from "../services/work.service";
 
 export class ValidationResponse {
     // TODO :ensure that all (client & serverside) validators follow this convention for responses.
@@ -11,4 +11,7 @@ export class ValidationResponse {
     time:number;
     content:any;
     isValid:boolean;
+    // data:any....needed?
 }
+
+

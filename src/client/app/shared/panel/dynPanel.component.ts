@@ -3,9 +3,11 @@ import {Component, Input, OnInit, ElementRef} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router, ActivatedRoute} from "@angular/router";
 import {FormConfig} from "../../config/form.config";
+import {FormType} from "../../config/FormType";
 
 
 @Component({
+    selector: 'dynForm',
     templateUrl: 'app/ai.component.html',
     // providers: [FormConfigService]
 })
@@ -17,7 +19,6 @@ export class DynPanel implements OnInit {
 
     //@Input formId:DocId
     // need to read controller name. it will handle submits and clicks and ???
-
     // what is this bound to???
 
     constructor(private router:Router,
@@ -31,6 +32,7 @@ export class DynPanel implements OnInit {
 //        this.formConfig = service.getFormConfig();
         this.formConfig = {
             title: 'test',
+            type:FormType.DYNAMIC,
             version:{major:1, minor:0},
             bizRules: [],
             panels:[{

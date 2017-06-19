@@ -1,22 +1,19 @@
 
 import {FormId} from "./form.id";
 import {BizRule} from "./biz.rule";
+import {Endpoint} from "./endpoint";
+import {Version} from "./version";
 
 class WorkflowDefinition {    // e.g. AutoContext (version2017)
-    startState:FormId;
-    stateCharts: {[key:string]:{[state:string]:FormId}};
-    forms:{[key:string]:FormId};
-    // can this be in the button config??  each submitConfig has an Endpoint.
-    controller:string;// base url to submit to.   e.g. ../{{lob}}    passes Work Id & Policy.
+    version:Version;
     lob:string;
-    //version/revision:Version
-    // ASSERT(startState in stateCharts);
+    stateTable: {[key:string] : {[state:string]:FormId}};
+    forms:{[key:string]:FormId};
+    // can this be in the button config??  each submitConfig has an Endpoint. maybe use this definition
+    // if button config doesn't have endpoint.
+    endpoint?:Endpoint;// base url to submit to.   e.g. ../{{lob}}    passes Work Id & Policy.
+    comments?:string;
 }
 
-// maybe have a template for this and create a new instance for every work/policy/quote whatever you call it.
-
-// WorkflowDefinition {
-//     this context stuff...
-// }
 
 

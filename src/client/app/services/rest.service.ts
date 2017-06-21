@@ -32,7 +32,7 @@ export class RestService<T> {
     }
 
 
-    public get(params:any): Observable<T[]> {
+    public get(params:any): Observable<T> {
         let searchParams = new URLSearchParams();
         for (let param in params) {
             searchParams.set(param, params[param]);

@@ -12,5 +12,6 @@ export class Policy {
     address : Address;
 
     // do i need LOB here?
+    lob:string;
 }
 

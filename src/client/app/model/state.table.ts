@@ -4,7 +4,7 @@ import {BizRule} from "./biz.rule";
 import {Endpoint} from "./endpoint";
 import {Version} from "./version";
 
-class WorkflowDefinition {    // e.g. AutoContext (version2017)
+export class StateTable {    // e.g. AutoContext (version2017)
     version:Version;
     lob:string;
     stateTable: {[key:string] : {[state:string]:FormId}};
@@ -13,6 +13,11 @@ class WorkflowDefinition {    // e.g. AutoContext (version2017)
     // if button config doesn't have endpoint.
     endpoint?:Endpoint;// base url to submit to.   e.g. ../{{lob}}    passes Work Id & Policy.
     comments?:string;
+
+    transition(form:string, event:string):FormId {
+        return this.stateTable[form][event];
+    }
+
 }
 
 

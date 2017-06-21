@@ -27,38 +27,6 @@ export class DynPanel implements OnInit {
                 private elementRef:ElementRef,
                 // private service: FormConfigService
     ) {
-
-        let formId = route.snapshot.params['formId'];
-//        this.formConfig = service.getFormConfig();
-        this.formConfig = {
-            title: 'test',
-            type:FormType.DYNAMIC,
-            version:{major:1, minor:0},
-            bizRules: [],
-            panels:[{
-                type: 'simple',
-                bizRules: [],
-                rows: [{
-                    widgets: [{
-                        value: null,
-                        key: 'name.first',
-                        type: 'text',
-                        label: 'First',
-                        labelKey: null,
-                        labelWidth: 3,
-                        width: 3,
-                        offset: 0,
-                        required: false,
-                        order: 0,
-                        css: null,
-                        rememberAs: null,
-                        bizRules: [],
-                    }],
-                }],
-            }],
-            layout:'default',
-            translations:null,
-        }
     }
 
     ngOnInit() {

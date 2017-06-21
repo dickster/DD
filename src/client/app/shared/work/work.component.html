@@ -1,0 +1,10 @@
+<div>
+    <div [ngSwitch]="state.form.type">
+        <div *ngSwitchCase="dynamic">
+            <dynFormPanel [policy]=policy [formConfig]=formConfig/>
+        </div>
+        <div *ngSwitchCase="static">
+            <formPanel [policy]=policy [formConfig]=formConfig/>
+        </div>
+    </div>
+</div>

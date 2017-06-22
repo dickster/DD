@@ -1,5 +1,5 @@
 
-import {BizRule} from "../model/biz.rule";
+import {Rule} from "../model/rule";
 export class WidgetConfig<T> {
     value: T;           // default value.
     key: string;
@@ -18,7 +18,7 @@ export class WidgetConfig<T> {
     css: string;
     rememberAs:string;
 
-    bizRules: BizRule[];
+    rules: Rule[];
 
 
     constructor(options: {
@@ -29,7 +29,7 @@ export class WidgetConfig<T> {
             required?: boolean,
             labelKey?: string,
             labelWidth?: number,
-            bizRules?:BizRule[],
+            rules?:Rule[],
             width?: number,
             offset?: number,
             rememberAs?:string,
@@ -47,8 +47,7 @@ export class WidgetConfig<T> {
         this.offset = options.offset || 0;
         this.labelWidth = options.labelWidth || 6;
         this.labelKey = options.labelKey || this.label;
-        this.placeholder = options.placeholder || '';
-        this.bizRules = options.bizRules || [];
+        this.rules = options.rules || [];
         this.rememberAs = options.rememberAs;   // add change listener.  set rememory[key]=value.
 
         // if async validators added, handle them myself?   i.e. after 400MS, call any queued up validators

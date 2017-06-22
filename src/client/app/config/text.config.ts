@@ -1,5 +1,5 @@
 import { WidgetConfig } from './widget.config';
-import {BizRule} from "../model/biz.rule";
+import {Rule} from "../model/rule";
 
 export class TextConfig extends WidgetConfig<string> {
     type = 'text';
@@ -16,7 +16,7 @@ export class TextConfig extends WidgetConfig<string> {
         required?: boolean,
         labelKey?: string,
         labelWidth?: number,
-        bizRules?:BizRule[],
+        rules?:Rule[],
         width?: number,
         offset?: number,
         rememberAs?:string,

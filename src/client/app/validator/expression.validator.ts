@@ -1,11 +1,11 @@
 import { Validator, FormControl } from '@angular/forms';
-import {BizRule} from "../model/biz.rule";
+import {Rule} from "../model/rule";
 
 export class ExpressionValidator implements Validator {
-    private bizRules:BizRule[];
+    private rules:Rule[];
 
-    constructor(bizRules:BizRule[]) {
-        this.bizRules = bizRules;
+    constructor(rules:Rule[]) {
+        this.rules = rules;
     }
 
     validate(c: FormControl): { [key: string]: any } {
@@ -15,14 +15,4 @@ export class ExpressionValidator implements Validator {
     }
 
 }
-
-
-// CustomValidator implements Validator {
-//     validate(c:FormControl)
-//      {
-//      }
-// }
-
-
-
 

@@ -1,6 +1,6 @@
 
 import {FormId} from "./form.id";
-import {BizRule} from "./biz.rule";
+import {Rule} from "./rule";
 import {Endpoint} from "./endpoint";
 import {Version} from "./version";
 

@@ -4,7 +4,7 @@ import {Expression} from "./expression";
 import {SyncValidator} from "./sync.validator";
 import {AsyncValidator} from "./async.validator";
 
-export class BizRule {
+export class Rule {
     showWhen:Expression; //nullable. // e.g isVisible() { return(previousInsurer==null) }
     validation:AsyncValidator|SyncValidator; //nullable.
     // help text will be shown if has-warning

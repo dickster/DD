@@ -1,7 +1,7 @@
 import { WidgetConfig } from './widget.config';
 import {DocId} from "../model/doc.id";
 import {Endpoint} from "../model/endpoint";
-import {BizRule} from "../model/biz.rule";
+import {Rule} from "../model/rule";
 
 
 export class DropDownConfig extends WidgetConfig<string> {

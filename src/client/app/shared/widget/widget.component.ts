@@ -40,7 +40,7 @@ export class QuestionComponent {
     isVisible(formValue:any) : boolean  {
         // get bizrules of form.
 
-        for (let bizRule of this.widget.bizRules) {
+        for (let rule of this.widget.rules) {
             //evaluate result = bizRule.showWhen();
             // result
         }
